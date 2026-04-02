@@ -73,4 +73,31 @@ if st.button("🚀 Generate Flowchart", type="primary"):
                 dst = parts[1].strip()
                 dot.edge(src, dst)
                 
+    # Display the Graph on the screen
     st.graphviz_chart(dot)
+    
+    # --- NEW: DOWNLOAD BUTTONS ---
+    st.markdown("### 📥 Download Your Flowchart")
+    
+    # Convert the graph to image bytes behind the scenes
+    png_bytes = dot.pipe(format='png')
+    pdf_bytes = dot.pipe(format='pdf')
+    
+    # Create two columns for the buttons
+    d_col1, d_col2 = st.columns(2)
+    
+    with d_col1:
+        st.download_button(
+            label="Download as PNG (Image)",
+            data=png_bytes,
+            file_name="methodology_flowchart.png",
+            mime="image/png"
+        )
+        
+    with d_col2:
+        st.download_button(
+            label="Download as PDF (Best Quality)",
+            data=pdf_bytes,
+            file_name="methodology_flowchart.pdf",
+            mime="application/pdf"
+        )
