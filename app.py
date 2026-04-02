@@ -3,7 +3,7 @@ import graphviz
 
 # Set up the Web App Page
 st.set_page_config(page_title="PhD Flowchart Builder", layout="wide")
-st.title("🧬 Dynamic PhD Methodology Flowchart Builder")
+st.title("🧬 Dynamic Methodology Flowchart Builder")
 st.markdown("Build, color, and connect your methodology phases visually. Your graph will generate at the bottom.")
 
 # --- SIDEBAR: Global Settings ---
