@@ -2,7 +2,7 @@ import streamlit as st
 import graphviz
 
 # Set up the Web App Page
-st.set_page_config(page_title="PhD Flowchart Builder", layout="wide")
+st.set_page_config(page_title="Methodology Flowchart Builder", layout="wide")
 st.title("🧬 Dynamic Methodology Flowchart Builder")
 st.markdown("Build, color, and connect your methodology phases visually. Your graph will generate at the bottom.")
 
